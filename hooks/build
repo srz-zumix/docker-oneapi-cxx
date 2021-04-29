@@ -1,0 +1,4 @@
+#!/bin/bash
+set -eu
+
+docker build --build-arg UBUNTU_VERSION=${DOCKER_TAG} -f $DOCKERFILE_PATH -t $IMAGE_NAME .
