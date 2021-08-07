@@ -14,6 +14,7 @@ jobs:
           - focal
           - bionic
           - xenial
+      fail-fast: false
     steps:
       - name: Check out the repo
         uses: actions/checkout@v2
