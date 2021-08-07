@@ -2,7 +2,7 @@ name: Docker Build
 on:
   push:
   schedule:
-    - cron: "0 0 * * 1"
+    - cron: "0 0 * * 4"
 
 jobs:
   push_to_registries:
@@ -32,7 +32,7 @@ jobs:
       - name: Push to version tag
         env:
           DOCKER_TAG: ${{ matrix.ubuntu-version }}
-          IMAGE_NAME: srzzumix/openapi-cxx
+          IMAGE_NAME: srzzumix/openapi-cxx:${{ matrix.ubuntu-version }}
           DOCKER_REPO: srzzumix/openapi-cxx
         run: |
           ./hooks/post_push
