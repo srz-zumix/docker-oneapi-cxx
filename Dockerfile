@@ -8,6 +8,7 @@ RUN apt-get update && \
     apt-get install -y software-properties-common apt-transport-https ca-certificates wget && \
     wget -O - https://apt.repos.intel.com/intel-gpg-keys/GPG-PUB-KEY-INTEL-SW-PRODUCTS.PUB 2>/dev/null | apt-key add - && \
     add-apt-repository -y "deb https://apt.repos.intel.com/oneapi all main" && \
+    add-apt-repository -y "ppa:git-core/ppa" && \
     apt-get update && \
     apt-get install -y --no-install-recommends \
         g++ \
