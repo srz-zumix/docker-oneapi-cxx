@@ -11,6 +11,7 @@ RUN apt-get update && \
     apt-get update && \
     apt-get install -y --no-install-recommends \
         g++ \
+        git \
         make \
         intel-oneapi-compiler-dpcpp-cpp-and-cpp-classic \
         && \
