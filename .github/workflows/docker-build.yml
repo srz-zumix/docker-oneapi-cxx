@@ -29,11 +29,11 @@ jobs:
         with:
           build-args: UBUNTU_VERSION=${{ matrix.ubuntu-version }}
           push: true
-          tags: srzzumix/openapi-cxx:${{ matrix.ubuntu-version }}
+          tags: srzzumix/oneapi-cxx:${{ matrix.ubuntu-version }}
       - name: Push to version tag
         env:
           DOCKER_TAG: ${{ matrix.ubuntu-version }}
-          IMAGE_NAME: srzzumix/openapi-cxx:${{ matrix.ubuntu-version }}
-          DOCKER_REPO: srzzumix/openapi-cxx
+          IMAGE_NAME: srzzumix/oneapi-cxx:${{ matrix.ubuntu-version }}
+          DOCKER_REPO: srzzumix/oneapi-cxx
         run: |
           ./hooks/post_push
